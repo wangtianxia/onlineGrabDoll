@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>心跳抓娃娃</title>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' ,
+          viewport-fit=cover/>
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-title" content="...">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+
+    <script type="text/javascript">
+
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if(clientWidth>750){
+                        clientWidth = 750
+                    }
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+    <script type="text/javascript">
+        function addBase(href){
+            var oHead = document.getElementsByTagName('HEAD').item(0);
+            var oBase= document.createElement("base");
+            oBase.setAttribute('target','_blank');
+            oBase.href="./" + href + "/";
+            oHead.appendChild(oBase);
+        }
+        function getUrlAttribute(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+            var context = "";
+            if (r != null)
+                context = r[2];
+            reg = null;
+            r = null;
+            return context == null || context == "" || context == "undefined" ? "" : context;
+        }
+        var v = getUrlAttribute('v');
+        if(v){
+            addBase(v);
+        }
+
+
+    </script>
+
+
+    <style type="text/css">
+
+        * {
+            font-family: "黑体", "Arial", "Microsoft YaHei", "宋体", sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            padding-top: constant(safe-area-inset-top);
+            padding-left: constant(safe-area-inset-left);
+            padding-right: constant(safe-area-inset-right);
+            padding-bottom: constant(safe-area-inset-bottom);
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+<div id="app" style="z-index: 0;width: 100%">
+</div>
+</body>
+<script type="text/javascript" src="https://starcdn.xintiao100.com/starResources/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://wwjcdn.like000.com/wwjJs/build.js"></script>
+<script type="text/javascript" src="https://wwjcdn.like000.com/wwjJs/exif.js"></script>
+<script type="text/javascript">
+    require('boot');
+</script>
+</html>
+

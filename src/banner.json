@@ -1,0 +1,40 @@
+{
+  "banner": {
+    "1003": [
+      {
+        "url": "static/image/banner/banner2.jpg",
+        "str": "share"
+      },
+      {
+        "url": "static/image/banner/banner4.jpg",
+        "str": "dollShow"
+      }
+    ],
+    "1001": [
+      {
+        "url": "static/image/banner/banner8.jpg",
+        "str": "distribution"
+      },
+      {
+        "url": "static/image/banner/banner4.jpg",
+        "str": "dollShow"
+      }
+    ],
+    "1007": [
+      {
+        "url": "static/image/banner/banner4.jpg",
+        "str": "dollShow"
+      }
+    ],
+    "default": [
+      {
+        "url": "static/image/banner/banner4.jpg",
+        "str": "dollShow"
+      },
+      {
+        "url": "static/image/banner/banner1.jpg",
+        "str": ""
+      }
+    ]
+  }
+}
